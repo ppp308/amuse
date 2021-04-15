@@ -44,4 +44,10 @@ public class Intputamuseclass {
 		int num = sc.nextInt();
 		return num;
 	}
+
+	public int continueecheck() {
+		System.out.println("계속 진행(1: 새로운 주문, 2: 프로그램 종료):");
+		int isexit = sc.nextInt();
+		return isexit;
+	}
 }
