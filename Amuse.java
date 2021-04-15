@@ -1,6 +1,7 @@
 package Amusementpark;
 
 import java.text.SimpleDateFormat;
+import java.util.ArrayList;
 import java.util.Date;
 import java.util.Scanner;
 
@@ -9,6 +10,8 @@ public class Amuse {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		Scanner sc = new Scanner(System.in);
+		
+		
 		
 		SimpleDateFormat sdf = new SimpleDateFormat("yyyyMMdd");
 		Date date = new Date();
@@ -22,12 +25,13 @@ public class Amuse {
 		int night_teen = 40000;
 		int night_adult =46000;
 		int night_old = 37000;
+		int num = 0;
 		
-		while (true) {	
+		do {		
 			
-			System.out.println("권종을 선택하세요\n");
-			System.out.println("1. 주간권\n");
-			System.out.println("2. 야간권\n");
+			System.out.println("권종을 선택하세요");
+			System.out.println("1. 주간권");
+			System.out.println("2. 야간권");
 			System.out.println("->");
 			int choose = sc.nextInt();
 						
@@ -186,13 +190,23 @@ public class Amuse {
 				} else if (choose == 2 && age >= 65) {
 					total = (int) (day_old * ordercount * 0.85);
 				}
-			}			
+			}
+			
 			System.out.println("가격은 "+total+"원 입니다.");
 			System.out.println("감사합니다.");
+			System.out.println("계속 발권 하시겠습니까?");
+			System.out.println("1.티켓 발권");
+			System.out.println("2.종료");
+			 num = sc.nextInt();
+		 if (num ==2) {
+			System.out.println("티켓 발권을 종료합니다. 감사합니다.");	
 			
-		
-		if(total<0)break;
+			
+			
+			break;
 		}
+		
+		}while(num ==1);
 	}
 }
 
