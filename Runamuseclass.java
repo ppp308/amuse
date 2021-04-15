@@ -4,8 +4,9 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 
 public class Runamuseclass {
-	Intputamuseclass inputclass = new Intputamuseclass();
+	private static final String choose = null;
 
+	Intputamuseclass inputclass = new Intputamuseclass();
 	SimpleDateFormat sdf = new SimpleDateFormat("yyyyMMdd");
 	Date date = new Date();
 	String today = sdf.format(date);
@@ -14,17 +15,17 @@ public class Runamuseclass {
 		String chooseresult = String.valueOf(choose);
 		switch (choose) {
 		case "1":
-			chooseresult="주간권";
+			chooseresult = "주간권";
 			break;
 		case "2":
-			chooseresult="야간권";
+			chooseresult = "야간권";
 			break;
 		default:
 			break;
 		}
 		return chooseresult;
 	}
-	
+
 	public String dividage(String customeridnumber) {
 
 		int today_year = Integer.parseInt(today.substring(0, 4));
@@ -60,5 +61,143 @@ public class Runamuseclass {
 		}
 		return age1;
 	}
-	public 
+
+	public int calculpricenothing(String choose, String age1, int ordercount) {
+		int total = 0;
+		if (choose.equals("주간권") && age1.equals("유아")) {
+			total = Valueclass.baby * ordercount;
+		} else if (choose.equals("주간권") && age1.equals("어린이")) {
+			total = Valueclass.day_child * ordercount;
+		} else if (choose.equals("주간권") && age1.equals("청소년")) {
+			total = Valueclass.day_teen * ordercount;
+		} else if (choose.equals("주간권") && age1.equals("어른")) {
+			total = Valueclass.day_adult * ordercount;
+		} else if (choose.equals("주간권") && age1.equals("경로")) {
+			total = Valueclass.day_old * ordercount;
+		}
+		if ("야간권" == choose && age1 == "유아") {
+			total = Valueclass.baby * ordercount;
+		} else if ("야간권" == choose && age1 == "어린이") {
+			total = Valueclass.night_child * ordercount;
+		} else if ("야간권" == choose && age1 == "청소년") {
+			total = Valueclass.night_teen * ordercount;
+		} else if ("야간권" == choose && age1 == "어른") {
+			total = Valueclass.night_adult * ordercount;
+		} else if ("야간권" == choose && age1 == "경로") {
+			total = Valueclass.night_old * ordercount;
+		}
+		return total;
+	}
+
+	public int calculpricedisabled(String choose, String age1, int ordercount) {
+		int total = 0;
+		if (choose.equals("주간권") && age1.equals("유아")) {
+			total = (int) (Valueclass.baby * ordercount * 0.6);
+		} else if (choose.equals("주간권") && age1.equals("어린이")) {
+			total = (int) (Valueclass.day_child * ordercount * 0.6);
+		} else if (choose.equals("주간권") && age1.equals("청소년")) {
+			total = (int) (Valueclass.day_teen * ordercount * 0.6);
+		} else if (choose.equals("주간권") && age1.equals("어른")) {
+			total = (int) (Valueclass.day_adult * ordercount * 0.6);
+		} else if (choose.equals("주간권") && age1.equals("경로")) {
+			total = (int) (Valueclass.day_old * ordercount * 0.6);
+		}
+
+		if (choose.equals("야간권") && age1.equals("유아")) {
+			total = (int) (Valueclass.baby * ordercount * 0.6);
+		} else if (choose.equals("야간권") && age1.equals("어린이")) {
+			total = (int) (Valueclass.day_child * ordercount * 0.6);
+		} else if (choose.equals("야간권") && age1.equals("청소년")) {
+			total = (int) (Valueclass.day_teen * ordercount * 0.6);
+		} else if (choose.equals("야간권") && age1.equals("어른")) {
+			total = (int) (Valueclass.day_adult * ordercount * 0.6);
+		} else if (choose.equals("야간권") && age1.equals("경로")) {
+			total = (int) (Valueclass.day_old * ordercount * 0.6);
+		}
+		return total;
+	}
+
+	public int calculpricenational(String choose, String age1, int ordercount) {
+		int total = 0;
+		if (choose.equals("주간권") && age1.equals("유아")) {
+			total = (int) (Valueclass.baby * ordercount * 0.5);
+		} else if (choose.equals("주간권") && age1.equals("어린이")) {
+			total = (int) (Valueclass.day_child * ordercount * 0.5);
+		} else if (choose.equals("주간권") && age1.equals("청소년")) {
+			total = (int) (Valueclass.day_teen * ordercount * 0.5);
+		} else if (choose.equals("주간권") && age1.equals("어른")) {
+			total = (int) (Valueclass.day_adult * ordercount * 0.5);
+		} else if (choose.equals("주간권") && age1.equals("경로")) {
+			total = (int) (Valueclass.day_old * ordercount * 0.5);
+		}
+
+		if (choose.equals("야간권") && age1.equals("유아")) {
+			total = (int) (Valueclass.baby * ordercount * 0.5);
+		} else if (choose.equals("야간권") && age1.equals("어린이")) {
+			total = (int) (Valueclass.day_child * ordercount * 0.5);
+		} else if (choose.equals("야간권") && age1.equals("청소년")) {
+			total = (int) (Valueclass.day_teen * ordercount * 0.5);
+		} else if (choose.equals("야간권") && age1.equals("어른")) {
+			total = (int) (Valueclass.day_adult * ordercount * 0.5);
+		} else if (choose.equals("야간권") && age1.equals("경로")) {
+			total = (int) (Valueclass.day_old * ordercount * 0.5);
+		}
+		return total;
+	}
+
+	public int calculpricemulti_child(String choose, String age1, int ordercount) {
+		int total = 0;
+		if (choose.equals("주간권") && age1.equals("유아")) {
+			total = (int) (Valueclass.baby * ordercount * 0.8);
+		} else if (choose.equals("주간권") && age1.equals("어린이")) {
+			total = (int) (Valueclass.day_child * ordercount * 0.8);
+		} else if (choose.equals("주간권") && age1.equals("청소년")) {
+			total = (int) (Valueclass.day_teen * ordercount * 0.8);
+		} else if (choose.equals("주간권") && age1.equals("어른")) {
+			total = (int) (Valueclass.day_adult * ordercount * 0.8);
+		} else if (choose.equals("주간권") && age1.equals("경로")) {
+			total = (int) (Valueclass.day_old * ordercount * 0.8);
+		}
+
+		if (choose.equals("야간권") && age1.equals("유아")) {
+			total = (int) (Valueclass.baby * ordercount * 0.8);
+		} else if (choose.equals("야간권") && age1.equals("어린이")) {
+			total = (int) (Valueclass.day_child * ordercount * 0.8);
+		} else if (choose.equals("야간권") && age1.equals("청소년")) {
+			total = (int) (Valueclass.day_teen * ordercount * 0.8);
+		} else if (choose.equals("야간권") && age1.equals("어른")) {
+			total = (int) (Valueclass.day_adult * ordercount * 0.8);
+		} else if (choose.equals("야간권") && age1.equals("경로")) {
+			total = (int) (Valueclass.day_old * ordercount * 0.8);
+		}
+		return total;
+	}
+
+	public int calculpricepregnant(String choose, String age1, int ordercount) {
+		int total = 0;
+		if (choose.equals("주간권") && age1.equals("유아")) {
+			total = (int) (Valueclass.baby * ordercount * 0.85);
+		} else if (choose.equals("주간권") && age1.equals("어린이")) {
+			total = (int) (Valueclass.day_child * ordercount * 0.85);
+		} else if (choose.equals("주간권") && age1.equals("청소년")) {
+			total = (int) (Valueclass.day_teen * ordercount * 0.85);
+		} else if (choose.equals("주간권") && age1.equals("어른")) {
+			total = (int) (Valueclass.day_adult * ordercount * 0.85);
+		} else if (choose.equals("주간권") && age1.equals("경로")) {
+			total = (int) (Valueclass.day_old * ordercount * 0.85);
+		}
+
+		if (choose.equals("야간권") && age1.equals("유아")) {
+			total = (int) (Valueclass.baby * ordercount * 0.85);
+		} else if (choose.equals("야간권") && age1.equals("어린이")) {
+			total = (int) (Valueclass.day_child * ordercount * 0.85);
+		} else if (choose.equals("야간권") && age1.equals("청소년")) {
+			total = (int) (Valueclass.day_teen * ordercount * 0.85);
+		} else if (choose.equals("야간권") && age1.equals("어른")) {
+			total = (int) (Valueclass.day_adult * ordercount * 0.85);
+		} else if (choose.equals("야간권") && age1.equals("경로")) {
+			total = (int) (Valueclass.day_old * ordercount * 0.85);
+		}
+		return total;
+	}
 }
