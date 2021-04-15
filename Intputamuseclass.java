@@ -6,12 +6,12 @@ public class Intputamuseclass {
 	Scanner sc = new Scanner(System.in);
 	Scanner sb = new Scanner(System.in);
 
-	public int daynightticket() {
+	public String daynightticket() {
 		System.out.println("권종을 선택하세요");
 		System.out.println("1. 주간권");
 		System.out.println("2. 야간권");
 		System.out.println("->");
-		int choose = sc.nextInt();
+		String choose = sc.nextLine();
 		return choose;
 	}
 

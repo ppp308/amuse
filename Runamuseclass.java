@@ -10,6 +10,21 @@ public class Runamuseclass {
 	Date date = new Date();
 	String today = sdf.format(date);
 
+	public String dividdaynight(String choose) {
+		String chooseresult = String.valueOf(choose);
+		switch (choose) {
+		case "1":
+			chooseresult="주간권";
+			break;
+		case "2":
+			chooseresult="야간권";
+			break;
+		default:
+			break;
+		}
+		return chooseresult;
+	}
+	
 	public String dividage(String customeridnumber) {
 
 		int today_year = Integer.parseInt(today.substring(0, 4));
@@ -45,4 +60,5 @@ public class Runamuseclass {
 		}
 		return age1;
 	}
+	public 
 }

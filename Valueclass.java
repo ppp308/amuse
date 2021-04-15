@@ -17,8 +17,7 @@ public class Valueclass {
 	public static final int multi_child = 4;
 	public static final int pregnant = 5;
 	
-	public static final int day =1;
-	public static final int night =2;
+	
 	
 	
 }
