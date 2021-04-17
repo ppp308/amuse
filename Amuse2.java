@@ -16,7 +16,7 @@ public class Amuse2 {
 		ArrayList<String> als = new ArrayList<String>();	
 		SimpleDateFormat format = new SimpleDateFormat("yyyyMMdd");	
 		Date time = new Date();
-		String time1 = format.format(time);
+	
 		BufferedWriter writer = new BufferedWriter(
 				new OutputStreamWriter(new FileOutputStream("C:\\Users\\박재현\\Desktop\\file.txt", true), "MS949"));
 		
@@ -37,7 +37,7 @@ public class Amuse2 {
 				int discountselect1 = inputclass.discountselect1();
 				String age1 = runclass.dividage(customeridnumber);
 				String daynight = runclass.dividdaynight(choose);
-				
+				String time1 = format.format(time);
 				if (discountselect1 == Valueclass2.nothing) {
 					total = runclass.calculpricenothing(daynight, age1, ordercount);
 				} else if (discountselect1 == Valueclass2.disabled) {
@@ -71,7 +71,7 @@ public class Amuse2 {
 					}
 					writer.write("날짜,권종,연령구분,수량,가격,우대사항\n");
 					writer.flush();
-					for (String customer1s : al) {
+					for (String customer1s : als) {
 						writer.write(customer1s + "\r\n");
 						writer.flush();
 					}
