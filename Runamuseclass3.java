@@ -60,151 +60,269 @@ public class Runamuseclass3 {
 		}
 		return age1;
 	}
-	public int totalprice(int total) {
-		int totalprice =0;
-		totalprice = totalprice + total;
+
+	
+
+	public int calculpricenothing(String choose, String age1, int ordercount,int discountselect1) {
+		int total = 0;
+		
+		if(discountselect1 ==1) {
+		if (choose.equals("주간권") && age1.equals("유아")) {		
+			total = Valueclass2.baby * ordercount;
+			System.out.println("가격은 " + total + "원 입니다.");
+			System.out.println("감사합니다.");
+		} else if (choose.equals("주간권") && age1.equals("어린이")) {
+			total = Valueclass2.day_child * ordercount;
+			System.out.println("가격은 " + total + "원 입니다.");
+			System.out.println("감사합니다.");
+		} else if (choose.equals("주간권") && age1.equals("청소년")) {
+			total = Valueclass2.day_teen * ordercount;
+			System.out.println("가격은 " + total + "원 입니다.");
+			System.out.println("감사합니다.");
+		} else if (choose.equals("주간권") && age1.equals("어른")) {
+			total = Valueclass2.day_adult * ordercount;
+			System.out.println("가격은 " + total + "원 입니다.");
+			System.out.println("감사합니다.");
+		} else if (choose.equals("주간권") && age1.equals("경로")) {
+			total = Valueclass2.day_old * ordercount;
+			System.out.println("가격은 " + total + "원 입니다.");
+			System.out.println("감사합니다.");
+		}
+		if (choose.equals("야간권") && age1.equals("유아")) {
+			total = Valueclass2.baby * ordercount;
+			System.out.println("가격은 " + total + "원 입니다.");
+			System.out.println("감사합니다.");
+		} else if (choose.equals("야간권") && age1.equals("어린이")) {
+			total = Valueclass2.night_child * ordercount;
+			System.out.println("가격은 " + total + "원 입니다.");
+			System.out.println("감사합니다.");
+		} else if (choose.equals("야간권") && age1.equals("청소년")) {
+			total = Valueclass2.night_teen * ordercount;
+			System.out.println("가격은 " + total + "원 입니다.");
+			System.out.println("감사합니다.");
+		} else if (choose.equals("야간권") && age1.equals("어른")) {
+			total = Valueclass2.night_adult * ordercount;
+			System.out.println("가격은 " + total + "원 입니다.");
+			System.out.println("감사합니다.");
+		} else if (choose.equals("야간권") && age1.equals("경로")) {
+			total = Valueclass2.night_old * ordercount;
+			System.out.println("가격은 " + total + "원 입니다.");
+			System.out.println("감사합니다.");
+		}
+	
+		}
+		return total;
+		
+	}
+
+	public int calculpricedisabled(String choose, String age1, int ordercount,int discountselect1) {
+		int total = 0;
+		if(discountselect1 ==2) {
+		if (choose.equals("주간권") && age1.equals("유아")) {
+			total = (int) (Valueclass2.baby * ordercount * 0.6);
+			System.out.println("가격은 " + total + "원 입니다.");
+			System.out.println("감사합니다.");
+		} else if (choose.equals("주간권") && age1.equals("어린이")) {
+			total = (int) (Valueclass2.day_child * ordercount * 0.6);
+			System.out.println("가격은 " + total + "원 입니다.");
+			System.out.println("감사합니다.");
+		} else if (choose.equals("주간권") && age1.equals("청소년")) {
+			total = (int) (Valueclass2.day_teen * ordercount * 0.6);
+			System.out.println("가격은 " + total + "원 입니다.");
+			System.out.println("감사합니다.");
+		} else if (choose.equals("주간권") && age1.equals("어른")) {
+			total = (int) (Valueclass2.day_adult * ordercount * 0.6);
+			System.out.println("가격은 " + total + "원 입니다.");
+			System.out.println("감사합니다.");
+		} else if (choose.equals("주간권") && age1.equals("경로")) {
+			total = (int) (Valueclass2.day_old * ordercount * 0.6);
+			System.out.println("가격은 " + total + "원 입니다.");
+			System.out.println("감사합니다.");
+		}
+
+		if (choose.equals("야간권") && age1.equals("유아")) {
+			total = (int) (Valueclass2.baby * ordercount * 0.6);
+			System.out.println("가격은 " + total + "원 입니다.");
+			System.out.println("감사합니다.");
+		} else if (choose.equals("야간권") && age1.equals("어린이")) {
+			total = (int) (Valueclass2.day_child * ordercount * 0.6);
+			System.out.println("가격은 " + total + "원 입니다.");
+			System.out.println("감사합니다.");
+		} else if (choose.equals("야간권") && age1.equals("청소년")) {
+			total = (int) (Valueclass2.day_teen * ordercount * 0.6);
+			System.out.println("가격은 " + total + "원 입니다.");
+			System.out.println("감사합니다.");
+		} else if (choose.equals("야간권") && age1.equals("어른")) {
+			total = (int) (Valueclass2.day_adult * ordercount * 0.6);
+			System.out.println("가격은 " + total + "원 입니다.");
+			System.out.println("감사합니다.");
+		} else if (choose.equals("야간권") && age1.equals("경로")) {
+			total = (int) (Valueclass2.day_old * ordercount * 0.6);
+			System.out.println("가격은 " + total + "원 입니다.");
+			System.out.println("감사합니다.");
+		}
+		}
+		return total;
+		
+	}
+
+	public int calculpricenational(String choose, String age1, int ordercount,int discountselect1) {
+		int total = 0;
+		if(discountselect1 ==3) {
+		if (choose.equals("주간권") && age1.equals("유아")) {
+			total = (int) (Valueclass2.baby * ordercount * 0.5);
+			System.out.println("가격은 " + total + "원 입니다.");
+			System.out.println("감사합니다.");
+		} else if (choose.equals("주간권") && age1.equals("어린이")) {
+			total = (int) (Valueclass2.day_child * ordercount * 0.5);
+			System.out.println("가격은 " + total + "원 입니다.");
+			System.out.println("감사합니다.");
+		} else if (choose.equals("주간권") && age1.equals("청소년")) {
+			total = (int) (Valueclass2.day_teen * ordercount * 0.5);
+			System.out.println("가격은 " + total + "원 입니다.");
+			System.out.println("감사합니다.");
+		} else if (choose.equals("주간권") && age1.equals("어른")) {
+			total = (int) (Valueclass2.day_adult * ordercount * 0.5);
+			System.out.println("가격은 " + total + "원 입니다.");
+			System.out.println("감사합니다.");
+		} else if (choose.equals("주간권") && age1.equals("경로")) {
+			total = (int) (Valueclass2.day_old * ordercount * 0.5);
+			System.out.println("가격은 " + total + "원 입니다.");
+			System.out.println("감사합니다.");
+		}
+
+		if (choose.equals("야간권") && age1.equals("유아")) {
+			total = (int) (Valueclass2.baby * ordercount * 0.5);
+			System.out.println("가격은 " + total + "원 입니다.");
+			System.out.println("감사합니다.");
+		} else if (choose.equals("야간권") && age1.equals("어린이")) {
+			total = (int) (Valueclass2.day_child * ordercount * 0.5);
+			System.out.println("가격은 " + total + "원 입니다.");
+			System.out.println("감사합니다.");
+		} else if (choose.equals("야간권") && age1.equals("청소년")) {
+			total = (int) (Valueclass2.day_teen * ordercount * 0.5);
+			System.out.println("가격은 " + total + "원 입니다.");
+			System.out.println("감사합니다.");
+		} else if (choose.equals("야간권") && age1.equals("어른")) {
+			total = (int) (Valueclass2.day_adult * ordercount * 0.5);
+			System.out.println("가격은 " + total + "원 입니다.");
+			System.out.println("감사합니다.");
+		} else if (choose.equals("야간권") && age1.equals("경로")) {
+			total = (int) (Valueclass2.day_old * ordercount * 0.5);
+			System.out.println("가격은 " + total + "원 입니다.");
+			System.out.println("감사합니다.");
+		}
+		}
+		return total;
+	}
+
+	public int calculpricemulti_child(String choose, String age1, int ordercount,int discountselect1) {
+		int total = 0;
+		if(discountselect1 ==4) {
+		if (choose.equals("주간권") && age1.equals("유아")) {
+			total = (int) (Valueclass2.baby * ordercount * 0.8);
+			System.out.println("가격은 " + total + "원 입니다.");
+			System.out.println("감사합니다.");
+		} else if (choose.equals("주간권") && age1.equals("어린이")) {
+			total = (int) (Valueclass2.day_child * ordercount * 0.8);
+			System.out.println("가격은 " + total + "원 입니다.");
+			System.out.println("감사합니다.");
+		} else if (choose.equals("주간권") && age1.equals("청소년")) {
+			total = (int) (Valueclass2.day_teen * ordercount * 0.8);
+			System.out.println("가격은 " + total + "원 입니다.");
+			System.out.println("감사합니다.");
+		} else if (choose.equals("주간권") && age1.equals("어른")) {
+			total = (int) (Valueclass2.day_adult * ordercount * 0.8);
+			System.out.println("가격은 " + total + "원 입니다.");
+			System.out.println("감사합니다.");
+		} else if (choose.equals("주간권") && age1.equals("경로")) {
+			total = (int) (Valueclass2.day_old * ordercount * 0.8);
+			System.out.println("가격은 " + total + "원 입니다.");
+			System.out.println("감사합니다.");
+		}
+
+		if (choose.equals("야간권") && age1.equals("유아")) {
+			total = (int) (Valueclass2.baby * ordercount * 0.8);
+			System.out.println("가격은 " + total + "원 입니다.");
+			System.out.println("감사합니다.");
+		} else if (choose.equals("야간권") && age1.equals("어린이")) {
+			total = (int) (Valueclass2.day_child * ordercount * 0.8);
+			System.out.println("가격은 " + total + "원 입니다.");
+			System.out.println("감사합니다.");
+		} else if (choose.equals("야간권") && age1.equals("청소년")) {
+			total = (int) (Valueclass2.day_teen * ordercount * 0.8);
+			System.out.println("가격은 " + total + "원 입니다.");
+			System.out.println("감사합니다.");
+		} else if (choose.equals("야간권") && age1.equals("어른")) {
+			total = (int) (Valueclass2.day_adult * ordercount * 0.8);
+			System.out.println("가격은 " + total + "원 입니다.");
+			System.out.println("감사합니다.");
+		} else if (choose.equals("야간권") && age1.equals("경로")) {
+			total = (int) (Valueclass2.day_old * ordercount * 0.8);
+			System.out.println("가격은 " + total + "원 입니다.");
+			System.out.println("감사합니다.");
+		}
+		}
+		return total;
+	}
+
+	public int calculpricepregnant(String choose, String age1, int ordercount,int discountselect1) {
+		int total = 0;
+		if(discountselect1 ==5) {
+		if (choose.equals("주간권") && age1.equals("유아")) {
+			total = (int) (Valueclass2.baby * ordercount * 0.85);
+			System.out.println("가격은 " + total + "원 입니다.");
+			System.out.println("감사합니다.");
+		} else if (choose.equals("주간권") && age1.equals("어린이")) {
+			total = (int) (Valueclass2.day_child * ordercount * 0.85);
+			System.out.println("가격은 " + total + "원 입니다.");
+			System.out.println("감사합니다.");
+		} else if (choose.equals("주간권") && age1.equals("청소년")) {
+			total = (int) (Valueclass2.day_teen * ordercount * 0.85);
+			System.out.println("가격은 " + total + "원 입니다.");
+			System.out.println("감사합니다.");
+		} else if (choose.equals("주간권") && age1.equals("어른")) {
+			total = (int) (Valueclass2.day_adult * ordercount * 0.85);
+			System.out.println("가격은 " + total + "원 입니다.");
+			System.out.println("감사합니다.");
+		} else if (choose.equals("주간권") && age1.equals("경로")) {
+			total = (int) (Valueclass2.day_old * ordercount * 0.85);
+			System.out.println("가격은 " + total + "원 입니다.");
+			System.out.println("감사합니다.");
+		}
+
+		if (choose.equals("야간권") && age1.equals("유아")) {
+			total = (int) (Valueclass2.baby * ordercount * 0.85);
+			System.out.println("가격은 " + total + "원 입니다.");
+			System.out.println("감사합니다.");
+		} else if (choose.equals("야간권") && age1.equals("어린이")) {
+			total = (int) (Valueclass2.day_child * ordercount * 0.85);
+			System.out.println("가격은 " + total + "원 입니다.");
+			System.out.println("감사합니다.");
+		} else if (choose.equals("야간권") && age1.equals("청소년")) {
+			total = (int) (Valueclass2.day_teen * ordercount * 0.85);
+			System.out.println("가격은 " + total + "원 입니다.");
+			System.out.println("감사합니다.");
+		} else if (choose.equals("야간권") && age1.equals("어른")) {
+			total = (int) (Valueclass2.day_adult * ordercount * 0.85);
+			System.out.println("가격은 " + total + "원 입니다.");
+			System.out.println("감사합니다.");
+			
+		} else if (choose.equals("야간권") && age1.equals("경로")) {
+			total = (int) (Valueclass2.day_old * ordercount * 0.85);
+			System.out.println("가격은 " + total + "원 입니다.");
+			System.out.println("감사합니다.");
+			System.out.println("가격은 " + total + "원 입니다.");
+			System.out.println("감사합니다.");
+		}
+		}
+		return total;
+	}
+
+	public int totalprice(int totalprice) {
+		
 		System.out.println("입장료 총액은 " + totalprice + "원 입니다.");
 		System.out.println("===================================");		
 		return totalprice;
-	}
-	
-
-	public int calculpricenothing(String choose, String age1, int ordercount) {
-		int total = 0;
-		if (choose.equals("주간권") && age1.equals("유아")) {		
-			total = Valueclass2.baby * ordercount;
-		} else if (choose.equals("주간권") && age1.equals("어린이")) {
-			total = Valueclass2.day_child * ordercount;
-		} else if (choose.equals("주간권") && age1.equals("청소년")) {
-			total = Valueclass2.day_teen * ordercount;
-		} else if (choose.equals("주간권") && age1.equals("어른")) {
-			total = Valueclass2.day_adult * ordercount;
-		} else if (choose.equals("주간권") && age1.equals("경로")) {
-			total = Valueclass2.day_old * ordercount;
-		}
-		if (choose.equals("야간권") && age1.equals("유아")) {
-			total = Valueclass2.baby * ordercount;
-		} else if (choose.equals("야간권") && age1.equals("어린이")) {
-			total = Valueclass2.night_child * ordercount;
-		} else if (choose.equals("야간권") && age1.equals("청소년")) {
-			total = Valueclass2.night_teen * ordercount;
-		} else if (choose.equals("야간권") && age1.equals("어른")) {
-			total = Valueclass2.night_adult * ordercount;
-		} else if (choose.equals("야간권") && age1.equals("경로")) {
-			total = Valueclass2.night_old * ordercount;
-		}
-		return total;
-	}
-
-	public int calculpricedisabled(String choose, String age1, int ordercount) {
-		int total = 0;
-		if (choose.equals("주간권") && age1.equals("유아")) {
-			total = (int) (Valueclass2.baby * ordercount * 0.6);
-		} else if (choose.equals("주간권") && age1.equals("어린이")) {
-			total = (int) (Valueclass2.day_child * ordercount * 0.6);
-		} else if (choose.equals("주간권") && age1.equals("청소년")) {
-			total = (int) (Valueclass2.day_teen * ordercount * 0.6);
-		} else if (choose.equals("주간권") && age1.equals("어른")) {
-			total = (int) (Valueclass2.day_adult * ordercount * 0.6);
-		} else if (choose.equals("주간권") && age1.equals("경로")) {
-			total = (int) (Valueclass2.day_old * ordercount * 0.6);
-		}
-
-		if (choose.equals("야간권") && age1.equals("유아")) {
-			total = (int) (Valueclass2.baby * ordercount * 0.6);
-		} else if (choose.equals("야간권") && age1.equals("어린이")) {
-			total = (int) (Valueclass2.day_child * ordercount * 0.6);
-		} else if (choose.equals("야간권") && age1.equals("청소년")) {
-			total = (int) (Valueclass2.day_teen * ordercount * 0.6);
-		} else if (choose.equals("야간권") && age1.equals("어른")) {
-			total = (int) (Valueclass2.day_adult * ordercount * 0.6);
-		} else if (choose.equals("야간권") && age1.equals("경로")) {
-			total = (int) (Valueclass2.day_old * ordercount * 0.6);
-		}
-		return total;
-	}
-
-	public int calculpricenational(String choose, String age1, int ordercount) {
-		int total = 0;
-		if (choose.equals("주간권") && age1.equals("유아")) {
-			total = (int) (Valueclass2.baby * ordercount * 0.5);
-		} else if (choose.equals("주간권") && age1.equals("어린이")) {
-			total = (int) (Valueclass2.day_child * ordercount * 0.5);
-		} else if (choose.equals("주간권") && age1.equals("청소년")) {
-			total = (int) (Valueclass2.day_teen * ordercount * 0.5);
-		} else if (choose.equals("주간권") && age1.equals("어른")) {
-			total = (int) (Valueclass2.day_adult * ordercount * 0.5);
-		} else if (choose.equals("주간권") && age1.equals("경로")) {
-			total = (int) (Valueclass2.day_old * ordercount * 0.5);
-		}
-
-		if (choose.equals("야간권") && age1.equals("유아")) {
-			total = (int) (Valueclass2.baby * ordercount * 0.5);
-		} else if (choose.equals("야간권") && age1.equals("어린이")) {
-			total = (int) (Valueclass2.day_child * ordercount * 0.5);
-		} else if (choose.equals("야간권") && age1.equals("청소년")) {
-			total = (int) (Valueclass2.day_teen * ordercount * 0.5);
-		} else if (choose.equals("야간권") && age1.equals("어른")) {
-			total = (int) (Valueclass2.day_adult * ordercount * 0.5);
-		} else if (choose.equals("야간권") && age1.equals("경로")) {
-			total = (int) (Valueclass2.day_old * ordercount * 0.5);
-		}
-		return total;
-	}
-
-	public int calculpricemulti_child(String choose, String age1, int ordercount) {
-		int total = 0;
-		if (choose.equals("주간권") && age1.equals("유아")) {
-			total = (int) (Valueclass2.baby * ordercount * 0.8);
-		} else if (choose.equals("주간권") && age1.equals("어린이")) {
-			total = (int) (Valueclass2.day_child * ordercount * 0.8);
-		} else if (choose.equals("주간권") && age1.equals("청소년")) {
-			total = (int) (Valueclass2.day_teen * ordercount * 0.8);
-		} else if (choose.equals("주간권") && age1.equals("어른")) {
-			total = (int) (Valueclass2.day_adult * ordercount * 0.8);
-		} else if (choose.equals("주간권") && age1.equals("경로")) {
-			total = (int) (Valueclass2.day_old * ordercount * 0.8);
-		}
-
-		if (choose.equals("야간권") && age1.equals("유아")) {
-			total = (int) (Valueclass2.baby * ordercount * 0.8);
-		} else if (choose.equals("야간권") && age1.equals("어린이")) {
-			total = (int) (Valueclass2.day_child * ordercount * 0.8);
-		} else if (choose.equals("야간권") && age1.equals("청소년")) {
-			total = (int) (Valueclass2.day_teen * ordercount * 0.8);
-		} else if (choose.equals("야간권") && age1.equals("어른")) {
-			total = (int) (Valueclass2.day_adult * ordercount * 0.8);
-		} else if (choose.equals("야간권") && age1.equals("경로")) {
-			total = (int) (Valueclass2.day_old * ordercount * 0.8);
-		}
-		return total;
-	}
-
-	public int calculpricepregnant(String choose, String age1, int ordercount) {
-		int total = 0;
-		if (choose.equals("주간권") && age1.equals("유아")) {
-			total = (int) (Valueclass2.baby * ordercount * 0.85);
-		} else if (choose.equals("주간권") && age1.equals("어린이")) {
-			total = (int) (Valueclass2.day_child * ordercount * 0.85);
-		} else if (choose.equals("주간권") && age1.equals("청소년")) {
-			total = (int) (Valueclass2.day_teen * ordercount * 0.85);
-		} else if (choose.equals("주간권") && age1.equals("어른")) {
-			total = (int) (Valueclass2.day_adult * ordercount * 0.85);
-		} else if (choose.equals("주간권") && age1.equals("경로")) {
-			total = (int) (Valueclass2.day_old * ordercount * 0.85);
-		}
-
-		if (choose.equals("야간권") && age1.equals("유아")) {
-			total = (int) (Valueclass2.baby * ordercount * 0.85);
-		} else if (choose.equals("야간권") && age1.equals("어린이")) {
-			total = (int) (Valueclass2.day_child * ordercount * 0.85);
-		} else if (choose.equals("야간권") && age1.equals("청소년")) {
-			total = (int) (Valueclass2.day_teen * ordercount * 0.85);
-		} else if (choose.equals("야간권") && age1.equals("어른")) {
-			total = (int) (Valueclass2.day_adult * ordercount * 0.85);
-		} else if (choose.equals("야간권") && age1.equals("경로")) {
-			total = (int) (Valueclass2.day_old * ordercount * 0.85);
-		}
-		return total;
 	}
 }
