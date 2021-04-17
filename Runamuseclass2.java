@@ -4,12 +4,11 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 
 public class Runamuseclass2 {
-	private static final String choose = null;
 	Inputamuseclass2 inputclass = new Inputamuseclass2();
 	SimpleDateFormat sdf = new SimpleDateFormat("yyyyMMdd");
 	Date date = new Date();
 	String today = sdf.format(date);
-	
+
 	public String dividdaynight(String choose) {
 		String chooseresult = String.valueOf(choose);
 		switch (choose) {

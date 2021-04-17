@@ -1,7 +1,8 @@
 package new2;
 
-public class Outputamuseclass2 {
+import java.util.ArrayList;
 
+public class Outputamuseclass2 {
 	Inputamuseclass2 inputclass = new Inputamuseclass2();
 
 	public String printdiscountselect(int discountselect1) {
