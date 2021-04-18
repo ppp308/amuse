@@ -2,31 +2,53 @@ package new2;
 
 import java.io.BufferedWriter;
 import java.io.FileOutputStream;
+import java.io.IOException;
 import java.io.OutputStreamWriter;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
 
-public class Outputamuseclass3 {
+public class Outputamuseclass3 throws IOException{
+	private static final int choose = 0;
 	SimpleDateFormat sdf = new SimpleDateFormat("yyyyMMdd");
-	//BufferedWriter writer = new BufferedWriter(
-	//		new OutputStreamWriter(new FileOutputStream("C:\\Users\\박재현\\Desktop\\file.txt", true), "MS949"));
-	Date date = new Date();	
+	 BufferedWriter writer = new BufferedWriter(new OutputStreamWriter(new FileOutputStream(
+			 "C:\\Users\\박재현\\Desktop\\file.txt", true), "MS949"));
+	Date date = new Date();
 	String today = sdf.format(date);
-	String time1 =sdf.format(date);
+	String time1 = sdf.format(date);
 	ArrayList<String> al = new ArrayList<String>();
 	ArrayList<String> als = new ArrayList<String>();
 	Inputamuseclass2 inputclass = new Inputamuseclass2();
-	
-/*	public void makecustomer(int choose){
-		String customer = output + " " + ageresult + "*" + ordercount + " " + price + "원" + " * "
+
+	public void printarray(int chooseresult, String ageresult, int ordercount, int price, int discountresult) {
+		String customer = chooseresult + " " + ageresult + "*" + ordercount + " " + price + "원" + " * "
 				+ discountresult;
 		al.add(customer);
+
+	}
+	public void printcsv(String time1,int chooseresult, String ageresult, int ordercount, int price, int discountresult) {
+		
 		String customer1 = time1 + "," + chooseresult + "," + ageresult + "," + ordercount + "," + price + ","
 				+ discountresult;
 		als.add(customer1);
+		
 	}
-	*/public void printchoose(int choose) {
+
+	public void printcustomer() {
+		for (String customers : al) {
+			System.out.println(customers);
+		}
+	}
+	public void printcsvcustomer() {
+		writer.write("날짜,권종,연령구분,수량,가격,우대사항\n");
+		writer.flush();
+		for (String customer1s : als) {
+			writer.write(customer1s + "\r\n");
+			writer.flush();
+		}
+	}
+
+	public String printchoose(int choose) {
 		String chooseresult = "";
 		switch (choose) {
 		case 1:
@@ -38,9 +60,11 @@ public class Outputamuseclass3 {
 		default:
 			break;
 		}
+		return chooseresult;
+
 	}
 
-	public void printage(int age) {
+	public String printage(int age) {
 		String ageresult = "";
 		if (age <= 2) {
 			ageresult = "유아";
@@ -53,9 +77,10 @@ public class Outputamuseclass3 {
 		} else {
 			ageresult = "경로";
 		}
+		return ageresult;
 	}
 
-	public void printdiscount(int discountselect) {
+	public String printdiscount(int discountselect) {
 		String discountresult = "";
 		if (discountselect == 1) {
 			discountresult = "우대 없음";
@@ -68,13 +93,14 @@ public class Outputamuseclass3 {
 		} else if (discountselect == 5) {
 			discountresult = "임산부 우대";
 		}
+		return discountresult;
 	}
+
 	public void printprice(int price) {
-		int totalprice =0;
-		System.out.println("가격은 " + price+ "원 입니다.");
+		int totalprice = 0;
+		System.out.println("가격은 " + price + "원 입니다.");
 		System.out.println("감사합니다.");
 		totalprice = totalprice + price;
 	}
-	
 
 }
