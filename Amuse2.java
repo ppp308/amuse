@@ -15,13 +15,14 @@ public class Amuse2 {
 		int isexit = 0;
 		String time1 = sdf.format(date);
 		int price = 0;
+		int totalprice = 0;
 		do {
 			while (true) {
 				Inputamuseclass2 inputclass = new Inputamuseclass2();
 				Outputamuseclass2 outputclass = new Outputamuseclass2();
 				Runamuseclass2 runclass = new Runamuseclass2();
+
 				int choose = inputclass.daynightticket();
-				
 				String customeridnumber = inputclass.customeridselect();
 				String age = runclass.calage(customeridnumber);
 				int discountselect = inputclass.discountselect1();
@@ -31,15 +32,17 @@ public class Amuse2 {
 				} else if (choose == 2) {
 					price = runclass.calnight(discountselect, ordercount);
 				}
-				num = inputclass.askcloseticket();
+				totalprice = totalprice + price;
 
 				String chooseresult = outputclass.printchoose(choose);
-				String discountresult = outputclass.printdiscount(discountselect);	
-				
+				String discountresult = outputclass.printdiscount(discountselect);
 				outputclass.printarray(chooseresult, age, ordercount, price, discountresult);
 				outputclass.printcsv(time1, chooseresult, age, ordercount, price, discountresult);
+				num = inputclass.askcloseticket();
 				if (num == 2) {
-					outputclass.printtwo();			
+
+					outputclass.printtwo();
+					outputclass.printtotal(totalprice);
 					isexit = inputclass.continueecheck();
 					break;
 				}

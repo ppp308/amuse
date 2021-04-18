@@ -30,31 +30,30 @@ public class Runamuseclass2 {
 				age = age - 1;
 			}
 		}
-		
-			String ageresult = "";
-			if (age <= 2) {
-				ageresult = "유아";
-			} else if (age >= 3 && age <= 12) {
-				ageresult = "어린이";
-			} else if (age >= 13 && age <= 18) {
-				ageresult = "청소년";
-			} else if (age >= 19 && age <= 64) {
-				ageresult = "어른";
-			} else {
-				ageresult = "경로";
-			}
-			return ageresult;
+		String ageresult = "";
+		if (age <= 2) {
+			ageresult = "유아";
+		} else if (age >= 3 && age <= 12) {
+			ageresult = "어린이";
+		} else if (age >= 13 && age <= 18) {
+			ageresult = "청소년";
+		} else if (age >= 19 && age <= 64) {
+			ageresult = "어른";
+		} else {
+			ageresult = "경로";
+		}
+		return ageresult;
 	}
+
 	public int calday(int discountselect, int ordercount) {
 		int price = 0;
-		int totalprice =0;
+		int totalprice = 0;
 		if (discountselect == 1) {
 			for (int i = 0; i < Valueclass2.dayageprice.length; i++) {
 				price = Valueclass2.dayageprice[i] * ordercount;
 			}
 			outputclass.print(price);
 			totalprice = totalprice + price;
-			System.out.println(totalprice);
 		} else if (discountselect == 2) {
 			for (int i = 0; i < Valueclass2.dayageprice.length; i++) {
 				price = (int) (Valueclass2.dayageprice[i] * ordercount * 0.6);
@@ -86,21 +85,19 @@ public class Runamuseclass2 {
 
 	public int calnight(int discountselect, int ordercount) {
 		int price = 0;
-		int totalprice =0;
+		int totalprice = 0;
 		if (discountselect == 1) {
 			for (int i = 0; i < Valueclass2.nightageprice.length; i++) {
 				price = Valueclass2.dayageprice[i] * ordercount;
 			}
 			outputclass.print(price);
 			totalprice = totalprice + price;
-
 		} else if (discountselect == 2) {
 			for (int i = 0; i < Valueclass2.nightageprice.length; i++) {
 				price = (int) (Valueclass2.dayageprice[i] * ordercount * 0.6);
 			}
 			outputclass.print(price);
 			totalprice = totalprice + price;
-
 		} else if (discountselect == 3) {
 			for (int i = 0; i < Valueclass2.nightageprice.length; i++) {
 				price = (int) (Valueclass2.dayageprice[i] * ordercount * 0.5);
@@ -122,5 +119,4 @@ public class Runamuseclass2 {
 		}
 		return price;
 	}
-
-} 
+}

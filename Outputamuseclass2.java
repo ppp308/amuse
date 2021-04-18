@@ -17,6 +17,7 @@ public class Outputamuseclass2 {
 	String today = sdf.format(date);
 	String time1 = sdf.format(date);
 	private static final int choose = 0;
+	int totalprice = 0;
 
 	public static void filewrite() throws IOException {
 		BufferedWriter writer = new BufferedWriter(
@@ -28,29 +29,29 @@ public class Outputamuseclass2 {
 			writer.flush();
 		}
 	}
+
 	public void printtwo() throws IOException {
 		System.out.println("티켓 발권을 종료합니다. 감사합니다.");
 		System.out.println("================제리랜드 ============");
 		printcustomer();
 		filewrite();
-	//	int printprice = printprice(totalprice);
-	//	 System.out.println("입장료 총액은 " + printprice+ "원 입니다.");
-		 System.out.println("===================================");
+	}
+
+	public void printtotal(int totalprice) {
+		System.out.println("입장료 총액은 " + totalprice + "원 입니다.");
+		System.out.println("===================================");
 	}
 
 	public void printarray(String chooseresult, String age, int ordercount, int price, String discountresult) {
-		String customer = chooseresult + " " + age+ "*" + ordercount + " " + price + "원" + " * "
-				+ discountresult;
+		String customer = chooseresult + " " + age + "*" + ordercount + " " + price + "원" + " * " + discountresult;
 		al.add(customer);
-
 	}
+
 	public void printcsv(String time1, String chooseresult, String age, int ordercount, int price,
 			String discountresult) {
-
-		String customer1 = time1 + "," + chooseresult+","+age +"," + ordercount + "," + price + ","
+		String customer1 = time1 + "," + chooseresult + "," + age + "," + ordercount + "," + price + ","
 				+ discountresult;
 		als.add(customer1);
-
 	}
 
 	public void printcustomer() {
@@ -72,9 +73,7 @@ public class Outputamuseclass2 {
 			break;
 		}
 		return chooseresult;
-
 	}
-
 
 	public String printdiscount(int discountselect) {
 		String discountresult = "";
@@ -91,12 +90,10 @@ public class Outputamuseclass2 {
 		}
 		return discountresult;
 	}
-	int totalprice = 0;
+
 	public void print(int price) {
 		System.out.println("가격은 " + price + "원 입니다.");
 		System.out.println("감사합니다.");
 		totalprice = totalprice + price;
 	}
-	
-
-} 
+}
