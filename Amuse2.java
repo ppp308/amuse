@@ -21,8 +21,9 @@ public class Amuse2 {
 				Outputamuseclass2 outputclass = new Outputamuseclass2();
 				Runamuseclass2 runclass = new Runamuseclass2();
 				int choose = inputclass.daynightticket();
-
+				
 				String customeridnumber = inputclass.customeridselect();
+				String age = runclass.calage(customeridnumber);
 				int discountselect = inputclass.discountselect1();
 				int ordercount = inputclass.ordercount();
 				if (choose == 1) {
@@ -31,8 +32,12 @@ public class Amuse2 {
 					price = runclass.calnight(discountselect, ordercount);
 				}
 				num = inputclass.askcloseticket();
-				outputclass.printarray(choose, customeridnumber, ordercount, price, discountselect);
-				outputclass.printcsv(time1, choose, customeridnumber, ordercount, price, discountselect);
+
+				String chooseresult = outputclass.printchoose(choose);
+				String discountresult = outputclass.printdiscount(discountselect);	
+				
+				outputclass.printarray(chooseresult, age, ordercount, price, discountresult);
+				outputclass.printcsv(time1, chooseresult, age, ordercount, price, discountresult);
 				if (num == 2) {
 					outputclass.printtwo();			
 					isexit = inputclass.continueecheck();

@@ -38,17 +38,16 @@ public class Outputamuseclass2 {
 		 System.out.println("===================================");
 	}
 
-	public void printarray(int chooseresult, String ageresult, int ordercount, int price, int discountresult) {
-		String customer = chooseresult + " " + ageresult + "*" + ordercount + " " + price + "원" + " * "
+	public void printarray(String chooseresult, String age, int ordercount, int price, String discountresult) {
+		String customer = chooseresult + " " + age+ "*" + ordercount + " " + price + "원" + " * "
 				+ discountresult;
 		al.add(customer);
 
 	}
+	public void printcsv(String time1, String chooseresult, String age, int ordercount, int price,
+			String discountresult) {
 
-	public void printcsv(String time1, int chooseresult, String ageresult, int ordercount, int price,
-			int discountresult) {
-
-		String customer1 = time1 + "," + chooseresult + "," + ageresult + "," + ordercount + "," + price + ","
+		String customer1 = time1 + "," + chooseresult+","+age +"," + ordercount + "," + price + ","
 				+ discountresult;
 		als.add(customer1);
 
@@ -76,21 +75,6 @@ public class Outputamuseclass2 {
 
 	}
 
-	public String printage(int age) {
-		String ageresult = "";
-		if (age <= 2) {
-			ageresult = "유아";
-		} else if (age >= 3 && age <= 12) {
-			ageresult = "어린이";
-		} else if (age >= 13 && age <= 18) {
-			ageresult = "청소년";
-		} else if (age >= 19 && age <= 64) {
-			ageresult = "어른";
-		} else {
-			ageresult = "경로";
-		}
-		return ageresult;
-	}
 
 	public String printdiscount(int discountselect) {
 		String discountresult = "";
@@ -113,5 +97,6 @@ public class Outputamuseclass2 {
 		System.out.println("감사합니다.");
 		totalprice = totalprice + price;
 	}
+	
 
-}
+} 

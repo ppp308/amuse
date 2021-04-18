@@ -48,4 +48,4 @@ public class Inputamuseclass2 {
 			int isexit = sc.nextInt();
 			return isexit;
 		}
-	}
+	} 
