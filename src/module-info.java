@@ -1,2 +1,2 @@
-module Amusementpark {
+module new2 {
 }
