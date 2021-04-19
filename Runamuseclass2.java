@@ -49,32 +49,32 @@ public class Runamuseclass2 {
 		int price = 0;
 		int totalprice = 0;
 		if (discountselect == 1) {
-			for (int i = 0; i < Valueclass2.dayageprice.length-1; i++) {
+			for (int i = 0; i < Valueclass2.dayageprice.length; i++) {
 				price = Valueclass2.dayageprice[i] * ordercount;
 			}
 			outputclass.print(price);
 			totalprice = totalprice + price;
 		} else if (discountselect == 2) {
-			for (int i = 0; i < Valueclass2.dayageprice.length-1; i++) {
+			for (int i = 0; i < Valueclass2.dayageprice.length; i++) {
 				price = (int) (Valueclass2.dayageprice[i] * ordercount * 0.6);
 			}
 			outputclass.print(price);
 			totalprice = totalprice + price;
 		} else if (discountselect == 3) {
-			for (int i = 0; i < Valueclass2.dayageprice.length-1; i++) {
+			for (int i = 0; i <Valueclass2.dayageprice.length+1; i++) {
 				price = (int) (Valueclass2.dayageprice[i] * ordercount * 0.5);
 			}
 			outputclass.print(price);
 			totalprice = totalprice + price;
 
 		} else if (discountselect == 4) {
-			for (int i = 0; i < Valueclass2.dayageprice.length-1; i++) {
+			for (int i = 0; i < Valueclass2.dayageprice.length; i++) {
 				price = (int) (Valueclass2.dayageprice[i] * ordercount * 0.8);
 			}
 			outputclass.print(price);
 			totalprice = totalprice + price;
 		} else if (discountselect == 5) {
-			for (int i = 0; i < Valueclass2.dayageprice.length-1; i++) {
+			for (int i = 0; i < Valueclass2.dayageprice.length; i++) {
 				price = (int) (Valueclass2.dayageprice[i] * ordercount * 0.85);
 			}
 			outputclass.print(price);
@@ -87,31 +87,31 @@ public class Runamuseclass2 {
 		int price = 0;
 		int totalprice = 0;
 		if (discountselect == 1) {
-			for (int i = 0; i < Valueclass2.nightageprice.length-1; i++) {
+			for (int i = 0; i < Valueclass2.nightageprice.length; i++) {
 				price = Valueclass2.dayageprice[i] * ordercount;
 			}
 			outputclass.print(price);
 			totalprice = totalprice + price;
 		} else if (discountselect == 2) {
-			for (int i = 0; i < Valueclass2.nightageprice.length-1; i++) {
+			for (int i = 0; i < Valueclass2.nightageprice.length; i++) {
 				price = (int) (Valueclass2.dayageprice[i] * ordercount * 0.6);
 			}
 			outputclass.print(price);
 			totalprice = totalprice + price;
 		} else if (discountselect == 3) {
-			for (int i = 0; i < Valueclass2.nightageprice.length-1; i++) {
+			for (int i = 0; i < Valueclass2.nightageprice.length; i++) {
 				price = (int) (Valueclass2.dayageprice[i] * ordercount * 0.5);
 			}
 			outputclass.print(price);
 			totalprice = totalprice + price;
 		} else if (discountselect == 4) {
-			for (int i = 0; i < Valueclass2.nightageprice.length-1; i++) {
+			for (int i = 0; i < Valueclass2.nightageprice.length; i++) {
 				price = (int) (Valueclass2.dayageprice[i] * ordercount * 0.8);
 			}
 			outputclass.print(price);
 			totalprice = totalprice + price;
 		} else if (discountselect == 5) {
-			for (int i = 0; i < Valueclass2.nightageprice.length-1; i++) {
+			for (int i = 0; i < Valueclass2.nightageprice.length; i++) {
 				price = (int) (Valueclass2.dayageprice[i] * ordercount * 0.85);
 			}
 			outputclass.print(price);
