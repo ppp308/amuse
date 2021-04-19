@@ -22,7 +22,7 @@ public class Outputamuseclass2 {
 	public static void filewrite() throws IOException {
 		BufferedWriter writer = new BufferedWriter(
 				new OutputStreamWriter(new FileOutputStream(Valueclass2.path, true), "MS949"));
-		writer.write("³¯Â¥,±ÇÁ¾,¿¬·É±¸ºĞ,¼ö·®,°¡°İ,¿ì´ë»çÇ×\n");
+		writer.write("ë‚ ì§œ,ê¶Œì¢…,ì—°ë ¹êµ¬ë¶„,ìˆ˜ëŸ‰,ê°€ê²©,ìš°ëŒ€ì‚¬í•­\n");
 		writer.flush();
 		for (String customer1s : als) {
 			writer.write(customer1s + "\r\n");
@@ -31,19 +31,19 @@ public class Outputamuseclass2 {
 	}
 
 	public void printtwo() throws IOException {
-		System.out.println("Æ¼ÄÏ ¹ß±ÇÀ» Á¾·áÇÕ´Ï´Ù. °¨»çÇÕ´Ï´Ù.");
-		System.out.println("================Á¦¸®·£µå ============");
+		System.out.println("í‹°ì¼“ ë°œê¶Œì„ ì¢…ë£Œí•©ë‹ˆë‹¤. ê°ì‚¬í•©ë‹ˆë‹¤. ");
+		System.out.println("================ì œë¦¬ëœë“œ ============");
 		printcustomer();
 		filewrite();
 	}
 
 	public void printtotal(int totalprice) {
-		System.out.println("ÀÔÀå·á ÃÑ¾×Àº " + totalprice + "¿ø ÀÔ´Ï´Ù.");
+		System.out.println("ì…ì¥ë£Œ ì´ì•¡ì€" + totalprice + "ì›ì…ë‹ˆë‹¤.");
 		System.out.println("===================================");
 	}
 
 	public void printarray(String chooseresult, String age, int ordercount, int price, String discountresult) {
-		String customer = chooseresult + " " + age + "*" + ordercount + " " + price + "¿ø" + " * " + discountresult;
+		String customer = chooseresult + " " + age + "*" + ordercount + " " + price + "ì›" + " * " + discountresult;
 		al.add(customer);
 	}
 
@@ -64,10 +64,10 @@ public class Outputamuseclass2 {
 		String chooseresult = "";
 		switch (choose) {
 		case 1:
-			chooseresult = "ÁÖ°£±Ç";
+			chooseresult = "ì£¼ê°„ê¶Œ";
 			break;
 		case 2:
-			chooseresult = "¾ß°£±Ç";
+			chooseresult = "ì•¼ê°„ê¶Œ";
 			break;
 		default:
 			break;
@@ -78,22 +78,22 @@ public class Outputamuseclass2 {
 	public String printdiscount(int discountselect) {
 		String discountresult = "";
 		if (discountselect == 1) {
-			discountresult = "¿ì´ë ¾øÀ½";
+			discountresult = "ìš°ëŒ€ì—†ìŒ";
 		} else if (discountselect == 2) {
-			discountresult = "Àå¾ÖÀÎ ¿ì´ë";
+			discountresult = "ì¥ì• ì¸ìš°ëŒ€";
 		} else if (discountselect == 3) {
-			discountresult = "±¹°¡À¯°øÀÚ ¿ì´ë";
+			discountresult = "êµ­ê°€ìœ ê³µì ìš°ëŒ€";
 		} else if (discountselect == 4) {
-			discountresult = "´ÙÀÚ³à ¿ì´ë";
+			discountresult = "ë‹¤ìë…€ ìš°ëŒ€";
 		} else if (discountselect == 5) {
-			discountresult = "ÀÓ»êºÎ ¿ì´ë";
+			discountresult = "ì„ì‚°ë¶€ ìš°ëŒ€";
 		}
 		return discountresult;
 	}
 
 	public void print(int price) {
-		System.out.println("°¡°İÀº " + price + "¿ø ÀÔ´Ï´Ù.");
-		System.out.println("°¨»çÇÕ´Ï´Ù.");
+		System.out.println("ê°€ê²©ì€ " + price + "ì›ì…ë‹ˆë‹¤.");
+		System.out.println("ê°ì‚¬í•©ë‹ˆë‹¤");
 		totalprice = totalprice + price;
 	}
 }

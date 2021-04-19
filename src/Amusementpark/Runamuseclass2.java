@@ -32,15 +32,15 @@ public class Runamuseclass2 {
 		}
 		String ageresult = "";
 		if (age <= 2) {
-			ageresult = "À¯¾Æ";
+			ageresult = "ìœ ì•„";
 		} else if (age >= 3 && age <= 12) {
-			ageresult = "¾î¸°ÀÌ";		
+			ageresult = "ì–´ë¦°ì´";		
 		} else if (age >= 13 && age <= 18) {
-			ageresult = "Ã»¼Ò³â";
+			ageresult = "ì²­ì†Œë…„";
 		} else if (age >= 19 && age <= 64) {
-			ageresult = "¾î¸¥";
+			ageresult = "ê²½ë¡œ";
 		} else {
-			ageresult = "°æ·Î";
+			ageresult = "ë…¸ì¸";
 		}
 		return ageresult;
 	}
@@ -49,72 +49,72 @@ public class Runamuseclass2 {
 		int price = 0;
 		int totalprice = 0;
 		if (discountselect == 1 ) {
-			if(age.equals("À¯¾Æ")) {
+			if(age.equals("ìœ ì•„")) {
 				price = Valueclass2.dayageprice[0] * ordercount;
-			}else if (discountselect == 1 && age.equals("¾î¸°ÀÌ")) {
+			}else if (discountselect == 1 && age.equals("ì–´ë¦°ì´")) {
 				price = Valueclass2.dayageprice[1] * ordercount;
-			}else if (discountselect == 1 && age.equals("Ã»¼Ò³â")) {
+			}else if (discountselect == 1 && age.equals("ì²­ì†Œë…„")) {
 				price = Valueclass2.dayageprice[2] * ordercount;
-			}else if (discountselect == 1 && age.equals("¾î¸¥")) {
+			}else if (discountselect == 1 && age.equals("ê²½ë¡œ")) {
 				price = Valueclass2.dayageprice[3] * ordercount;
-			}else if (discountselect == 1 && age.equals("°æ·Î")) {
+			}else if (discountselect == 1 && age.equals("ë…¸ì¸")) {
 				price = Valueclass2.dayageprice[4] * ordercount;
 			}
 			outputclass.print(price);
 			totalprice = totalprice + price;
 		} else if (discountselect == 2) {
-			if(age.equals("À¯¾Æ")) {
+			if(age.equals("ìœ ì•„")) {
 				price = (int) (Valueclass2.dayageprice[0] * ordercount*0.6) ;
-			}else if (discountselect == 2 && age.equals("¾î¸°ÀÌ")){
+			}else if (discountselect == 2 && age.equals("ì–´ë¦°ì´")){
 				price = (int) (Valueclass2.dayageprice[1] * ordercount*0.6) ;
-			}else if (discountselect == 2 && age.equals("Ã»¼Ò³â")) {
+			}else if (discountselect == 2 && age.equals("ì²­ì†Œë…„")) {
 				price = (int) (Valueclass2.dayageprice[2] * ordercount*0.6);
-			}else if (discountselect == 2 && age.equals("¾î¸¥"))  {
+			}else if (discountselect == 2 && age.equals("ì–´ë¥¸"))  {
 				price = (int) (Valueclass2.dayageprice[3] * ordercount*0.6) ;
-			}else if (discountselect == 2 && age.equals("°æ·Î")) {
+			}else if (discountselect == 2 && age.equals("ê²½ë¡œ")) {
 				price = (int) (Valueclass2.dayageprice[4] * ordercount*0.6) ;
 			}
 			outputclass.print(price);
 			totalprice = totalprice + price;
 		} else if (discountselect == 3) {
-			if(age.equals("À¯¾Æ")) {
+			if(age.equals("ìœ ì•„")) {
 				price = (int) (Valueclass2.dayageprice[0] * ordercount*0.5) ;
-			}else if (discountselect == 3 && age.equals("¾î¸°ÀÌ")){
+			}else if (discountselect == 3 && age.equals("ì–´ë¦°ì´")){
 				price = (int) (Valueclass2.dayageprice[1] * ordercount*0.5) ;
-			}else if (discountselect == 3 && age.equals("Ã»¼Ò³â")) {
+			}else if (discountselect == 3 && age.equals("ì²­ì†Œë…„")) {
 				price = (int) (Valueclass2.dayageprice[2] * ordercount*0.5);
-			}else if (discountselect == 3 && age.equals("¾î¸¥"))  {
+			}else if (discountselect == 3 && age.equals("ì–´ë¥¸"))  {
 				price = (int) (Valueclass2.dayageprice[3] * ordercount*0.5) ;
-			}else if (discountselect == 3 && age.equals("°æ·Î")) {
+			}else if (discountselect == 3 && age.equals("ê²½ë¡œ")) {
 				price = (int) (Valueclass2.dayageprice[4] * ordercount*0.5) ;
 			}
 			outputclass.print(price);
 			totalprice = totalprice + price;
 
 		} else if (discountselect == 4) {
-			if(age.equals("À¯¾Æ")) {
+			if(age.equals("ìœ ì•„")) {
 				price = (int) (Valueclass2.dayageprice[0] * ordercount*0.8) ;
-			}else if (discountselect == 4 && age.equals("¾î¸°ÀÌ")){
+			}else if (discountselect == 4 && age.equals("ì–´ë¦°ì´")){
 				price = (int) (Valueclass2.dayageprice[1] * ordercount*0.8) ;
-			}else if (discountselect == 4 && age.equals("Ã»¼Ò³â")) {
+			}else if (discountselect == 4 && age.equals("ì²­ì†Œë…„")) {
 				price = (int) (Valueclass2.dayageprice[2] * ordercount*0.8);
-			}else if (discountselect == 4 && age.equals("¾î¸¥"))  {
+			}else if (discountselect == 4 && age.equals("ì–´ë¥¸"))  {
 				price = (int) (Valueclass2.dayageprice[3] * ordercount*0.8) ;
-			}else if (discountselect == 4 && age.equals("°æ·Î")) {
+			}else if (discountselect == 4 && age.equals("ê²½ë¡œ")) {
 				price = (int) (Valueclass2.dayageprice[4] * ordercount*0.8) ;
 			}
 			outputclass.print(price);
 			totalprice = totalprice + price;
 		} else if (discountselect == 5) {
-			if(age.equals("À¯¾Æ")) {
+			if(age.equals("ìœ ì•„")) {
 				price = (int) (Valueclass2.dayageprice[0] * ordercount*0.85) ;
-			}else if (discountselect == 5 && age.equals("¾î¸°ÀÌ")){
+			}else if (discountselect == 5 && age.equals("ì–´ë¦°ì´")){
 				price = (int) (Valueclass2.dayageprice[1] * ordercount*0.85) ;
-			}else if (discountselect == 5 && age.equals("Ã»¼Ò³â")) {
+			}else if (discountselect == 5 && age.equals("ì²­ì†Œë…„")) {
 				price = (int) (Valueclass2.dayageprice[2] * ordercount*0.85);
-			}else if (discountselect == 5 && age.equals("¾î¸¥"))  {
+			}else if (discountselect == 5 && age.equals("ì–´ë¥¸"))  {
 				price = (int) (Valueclass2.dayageprice[3] * ordercount*0.85) ;
-			}else if (discountselect == 5 && age.equals("°æ·Î")) {
+			}else if (discountselect == 5 && age.equals("ê²½ë¡œ")) {
 				price = (int) (Valueclass2.dayageprice[4] * ordercount*0.85) ;
 			}
 			outputclass.print(price);
@@ -127,72 +127,72 @@ public class Runamuseclass2 {
 		int price = 0;
 		int totalprice = 0;
 		if (discountselect == 1 ) {
-			if(age.equals("À¯¾Æ")) {
+			if(age.equals("ìœ ì•„")) {
 				price = Valueclass2.nightageprice[0] * ordercount;
-			}else if (discountselect == 1 && age.equals("¾î¸°ÀÌ")) {
+			}else if (discountselect == 1 && age.equals("ì–´ë¦°ì´")) {
 				price = Valueclass2.nightageprice[1] * ordercount;
-			}else if (discountselect == 1 && age.equals("Ã»¼Ò³â")) {
+			}else if (discountselect == 1 && age.equals("ì²­ì†Œë…„")) {
 				price = Valueclass2.nightageprice[2] * ordercount;
-			}else if (discountselect == 1 && age.equals("¾î¸¥")) {
+			}else if (discountselect == 1 && age.equals("ì–´ë¥¸")) {
 				price = Valueclass2.nightageprice[3] * ordercount;
-			}else if (discountselect == 1 && age.equals("°æ·Î")) {
+			}else if (discountselect == 1 && age.equals("ê²½ë¡œ")) {
 				price = Valueclass2.nightageprice[4] * ordercount;
 			}
 			outputclass.print(price);
 			totalprice = totalprice + price;
 		} else if (discountselect == 2) {
-			if(age.equals("À¯¾Æ")) {
+			if(age.equals("ìœ ì•„")) {
 				price = (int) (Valueclass2.nightageprice[0] * ordercount*0.6) ;
-			}else if (discountselect == 2 && age.equals("¾î¸°ÀÌ")){
+			}else if (discountselect == 2 && age.equals("ì–´ë¦°ì´")){
 				price = (int) (Valueclass2.nightageprice[1] * ordercount*0.6) ;
-			}else if (discountselect == 2 && age.equals("Ã»¼Ò³â")) {
+			}else if (discountselect == 2 && age.equals("ì²­ì†Œë…„")) {
 				price = (int) (Valueclass2.nightageprice[2] * ordercount*0.6);
-			}else if (discountselect == 2 && age.equals("¾î¸¥"))  {
+			}else if (discountselect == 2 && age.equals("ì–´ë¥¸"))  {
 				price = (int) (Valueclass2.nightageprice[3] * ordercount*0.6) ;
-			}else if (discountselect == 2 && age.equals("°æ·Î")) {
+			}else if (discountselect == 2 && age.equals("ê²½ë¡œ")) {
 				price = (int) (Valueclass2.nightageprice[4] * ordercount*0.6) ;
 			}
 			outputclass.print(price);
 			totalprice = totalprice + price;
 		} else if (discountselect == 3) {
-			if(age.equals("À¯¾Æ")) {
+			if(age.equals("ìœ ì•„")) {
 				price = (int) (Valueclass2.nightageprice[0] * ordercount*0.5) ;
-			}else if (discountselect == 3 && age.equals("¾î¸°ÀÌ")){
+			}else if (discountselect == 3 && age.equals("ì–´ë¦°ì´")){
 				price = (int) (Valueclass2.nightageprice[1] * ordercount*0.5) ;
-			}else if (discountselect == 3 && age.equals("Ã»¼Ò³â")) {
+			}else if (discountselect == 3 && age.equals("ì²­ì†Œë…„")) {
 				price = (int) (Valueclass2.nightageprice[2] * ordercount*0.5);
-			}else if (discountselect == 3 && age.equals("¾î¸¥"))  {
+			}else if (discountselect == 3 && age.equals("ì–´ë¥¸"))  {
 				price = (int) (Valueclass2.nightageprice[3] * ordercount*0.5) ;
-			}else if (discountselect == 3 && age.equals("°æ·Î")) {
+			}else if (discountselect == 3 && age.equals("ê²½ë¡œ")) {
 				price = (int) (Valueclass2.nightageprice[4] * ordercount*0.5) ;
 			}
 			outputclass.print(price);
 			totalprice = totalprice + price;
 
 		} else if (discountselect == 4) {
-			if(age.equals("À¯¾Æ")) {
+			if(age.equals("ìœ ì•„")) {
 				price = (int) (Valueclass2.nightageprice[0] * ordercount*0.8) ;
-			}else if (discountselect == 4 && age.equals("¾î¸°ÀÌ")){
+			}else if (discountselect == 4 && age.equals("ì–´ë¦°ì´")){
 				price = (int) (Valueclass2.nightageprice[1] * ordercount*0.8) ;
-			}else if (discountselect == 4 && age.equals("Ã»¼Ò³â")) {
+			}else if (discountselect == 4 && age.equals("ì²­ì†Œë…„")) {
 				price = (int) (Valueclass2.nightageprice[2] * ordercount*0.8);
-			}else if (discountselect == 4 && age.equals("¾î¸¥"))  {
+			}else if (discountselect == 4 && age.equals("ì–´ë¥¸"))  {
 				price = (int) (Valueclass2.nightageprice[3] * ordercount*0.8) ;
-			}else if (discountselect == 4 && age.equals("°æ·Î")) {
+			}else if (discountselect == 4 && age.equals("ê²½ë¡œ")) {
 				price = (int) (Valueclass2.nightageprice[4] * ordercount*0.8) ;
 			}
 			outputclass.print(price);
 			totalprice = totalprice + price;
 		} else if (discountselect == 5) {
-			if(age.equals("À¯¾Æ")) {
+			if(age.equals("ìœ ì•„")) {
 				price = (int) (Valueclass2.nightageprice[0] * ordercount*0.85) ;
-			}else if (discountselect == 5 && age.equals("¾î¸°ÀÌ")){
+			}else if (discountselect == 5 && age.equals("ì–´ë¦°ì´")){
 				price = (int) (Valueclass2.nightageprice[1] * ordercount*0.85) ;
-			}else if (discountselect == 5 && age.equals("Ã»¼Ò³â")) {
+			}else if (discountselect == 5 && age.equals("ì²­ì†Œë…„")) {
 				price = (int) (Valueclass2.nightageprice[2] * ordercount*0.85);
-			}else if (discountselect == 5 && age.equals("¾î¸¥"))  {
+			}else if (discountselect == 5 && age.equals("ì–´ë¥¸"))  {
 				price = (int) (Valueclass2.nightageprice[3] * ordercount*0.85) ;
-			}else if (discountselect == 5 && age.equals("°æ·Î")) {
+			}else if (discountselect == 5 && age.equals("ê²½ë¡œ")) {
 				price = (int) (Valueclass2.nightageprice[4] * ordercount*0.85) ;
 			}
 			outputclass.print(price);
