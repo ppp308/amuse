@@ -28,9 +28,9 @@ public class Amuse2 {
 				int discountselect = inputclass.discountselect1();
 				int ordercount = inputclass.ordercount();
 				if (choose == 1) {
-					price = runclass.calday(discountselect, ordercount);
+					price = runclass.calday(discountselect, ordercount,age);
 				} else if (choose == 2) {
-					price = runclass.calnight(discountselect, ordercount);
+					price = runclass.calnight(discountselect, ordercount,age);
 				}
 				totalprice = totalprice + price;
 

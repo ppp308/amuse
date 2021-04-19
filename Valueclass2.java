@@ -1,8 +1,8 @@
 package Amusementpark;
 
 public class Valueclass2 {
-	public static int[] dayageprice = { 0, 44000, 47000, 56000, 44000 };
-	public static int[] nightageprice = { 0, 37000, 40000, 46000, 37000 };
+	public static int[] dayageprice = {  0,44000, 47000, 56000, 44000 };
+	public static int[] nightageprice = { 37000, 40000, 46000, 37000 };
 	public static final int nothing = 1;
 	public static final int disabled = 2;
 	public static final int national = 3;
