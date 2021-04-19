@@ -34,7 +34,7 @@ public class Runamuseclass2 {
 		if (age <= 2) {
 			ageresult = "유아";
 		} else if (age >= 3 && age <= 12) {
-			ageresult = "어린이";
+			ageresult = "어린이";		
 		} else if (age >= 13 && age <= 18) {
 			ageresult = "청소년";
 		} else if (age >= 19 && age <= 64) {
@@ -45,37 +45,77 @@ public class Runamuseclass2 {
 		return ageresult;
 	}
 
-	public int calday(int discountselect, int ordercount) {
+	public int calday(int discountselect, int ordercount,String age) {
 		int price = 0;
 		int totalprice = 0;
-		if (discountselect == 1) {
-			for (int i = 0; i < Valueclass2.dayageprice.length; i++) {
-				price = Valueclass2.dayageprice[i] * ordercount;
+		if (discountselect == 1 ) {
+			if(age.equals("유아")) {
+				price = Valueclass2.dayageprice[0] * ordercount;
+			}else if (discountselect == 1 && age.equals("어린이")) {
+				price = Valueclass2.dayageprice[1] * ordercount;
+			}else if (discountselect == 1 && age.equals("청소년")) {
+				price = Valueclass2.dayageprice[2] * ordercount;
+			}else if (discountselect == 1 && age.equals("어른")) {
+				price = Valueclass2.dayageprice[3] * ordercount;
+			}else if (discountselect == 1 && age.equals("경로")) {
+				price = Valueclass2.dayageprice[4] * ordercount;
 			}
 			outputclass.print(price);
 			totalprice = totalprice + price;
 		} else if (discountselect == 2) {
-			for (int i = 0; i < Valueclass2.dayageprice.length; i++) {
-				price = (int) (Valueclass2.dayageprice[i] * ordercount * 0.6);
+			if(age.equals("유아")) {
+				price = (int) (Valueclass2.dayageprice[0] * ordercount*0.6) ;
+			}else if (discountselect == 2 && age.equals("어린이")){
+				price = (int) (Valueclass2.dayageprice[1] * ordercount*0.6) ;
+			}else if (discountselect == 2 && age.equals("청소년")) {
+				price = (int) (Valueclass2.dayageprice[2] * ordercount*0.6);
+			}else if (discountselect == 2 && age.equals("어른"))  {
+				price = (int) (Valueclass2.dayageprice[3] * ordercount*0.6) ;
+			}else if (discountselect == 2 && age.equals("경로")) {
+				price = (int) (Valueclass2.dayageprice[4] * ordercount*0.6) ;
 			}
 			outputclass.print(price);
 			totalprice = totalprice + price;
 		} else if (discountselect == 3) {
-			for (int i = 0; i <Valueclass2.dayageprice.length+1; i++) {
-				price = (int) (Valueclass2.dayageprice[i] * ordercount * 0.5);
+			if(age.equals("유아")) {
+				price = (int) (Valueclass2.dayageprice[0] * ordercount*0.5) ;
+			}else if (discountselect == 3 && age.equals("어린이")){
+				price = (int) (Valueclass2.dayageprice[1] * ordercount*0.5) ;
+			}else if (discountselect == 3 && age.equals("청소년")) {
+				price = (int) (Valueclass2.dayageprice[2] * ordercount*0.5);
+			}else if (discountselect == 3 && age.equals("어른"))  {
+				price = (int) (Valueclass2.dayageprice[3] * ordercount*0.5) ;
+			}else if (discountselect == 3 && age.equals("경로")) {
+				price = (int) (Valueclass2.dayageprice[4] * ordercount*0.5) ;
 			}
 			outputclass.print(price);
 			totalprice = totalprice + price;
 
 		} else if (discountselect == 4) {
-			for (int i = 0; i < Valueclass2.dayageprice.length; i++) {
-				price = (int) (Valueclass2.dayageprice[i] * ordercount * 0.8);
+			if(age.equals("유아")) {
+				price = (int) (Valueclass2.dayageprice[0] * ordercount*0.8) ;
+			}else if (discountselect == 4 && age.equals("어린이")){
+				price = (int) (Valueclass2.dayageprice[1] * ordercount*0.8) ;
+			}else if (discountselect == 4 && age.equals("청소년")) {
+				price = (int) (Valueclass2.dayageprice[2] * ordercount*0.8);
+			}else if (discountselect == 4 && age.equals("어른"))  {
+				price = (int) (Valueclass2.dayageprice[3] * ordercount*0.8) ;
+			}else if (discountselect == 4 && age.equals("경로")) {
+				price = (int) (Valueclass2.dayageprice[4] * ordercount*0.8) ;
 			}
 			outputclass.print(price);
 			totalprice = totalprice + price;
 		} else if (discountselect == 5) {
-			for (int i = 0; i < Valueclass2.dayageprice.length; i++) {
-				price = (int) (Valueclass2.dayageprice[i] * ordercount * 0.85);
+			if(age.equals("유아")) {
+				price = (int) (Valueclass2.dayageprice[0] * ordercount*0.85) ;
+			}else if (discountselect == 5 && age.equals("어린이")){
+				price = (int) (Valueclass2.dayageprice[1] * ordercount*0.85) ;
+			}else if (discountselect == 5 && age.equals("청소년")) {
+				price = (int) (Valueclass2.dayageprice[2] * ordercount*0.85);
+			}else if (discountselect == 5 && age.equals("어른"))  {
+				price = (int) (Valueclass2.dayageprice[3] * ordercount*0.85) ;
+			}else if (discountselect == 5 && age.equals("경로")) {
+				price = (int) (Valueclass2.dayageprice[4] * ordercount*0.85) ;
 			}
 			outputclass.print(price);
 			totalprice = totalprice + price;
@@ -83,36 +123,77 @@ public class Runamuseclass2 {
 		return price;
 	}
 
-	public int calnight(int discountselect, int ordercount) {
+	public int calnight(int discountselect, int ordercount,String age) {
 		int price = 0;
 		int totalprice = 0;
-		if (discountselect == 1) {
-			for (int i = 0; i < Valueclass2.nightageprice.length; i++) {
-				price = Valueclass2.dayageprice[i] * ordercount;
+		if (discountselect == 1 ) {
+			if(age.equals("유아")) {
+				price = Valueclass2.nightageprice[0] * ordercount;
+			}else if (discountselect == 1 && age.equals("어린이")) {
+				price = Valueclass2.nightageprice[1] * ordercount;
+			}else if (discountselect == 1 && age.equals("청소년")) {
+				price = Valueclass2.nightageprice[2] * ordercount;
+			}else if (discountselect == 1 && age.equals("어른")) {
+				price = Valueclass2.nightageprice[3] * ordercount;
+			}else if (discountselect == 1 && age.equals("경로")) {
+				price = Valueclass2.nightageprice[4] * ordercount;
 			}
 			outputclass.print(price);
 			totalprice = totalprice + price;
 		} else if (discountselect == 2) {
-			for (int i = 0; i < Valueclass2.nightageprice.length; i++) {
-				price = (int) (Valueclass2.dayageprice[i] * ordercount * 0.6);
+			if(age.equals("유아")) {
+				price = (int) (Valueclass2.nightageprice[0] * ordercount*0.6) ;
+			}else if (discountselect == 2 && age.equals("어린이")){
+				price = (int) (Valueclass2.nightageprice[1] * ordercount*0.6) ;
+			}else if (discountselect == 2 && age.equals("청소년")) {
+				price = (int) (Valueclass2.nightageprice[2] * ordercount*0.6);
+			}else if (discountselect == 2 && age.equals("어른"))  {
+				price = (int) (Valueclass2.nightageprice[3] * ordercount*0.6) ;
+			}else if (discountselect == 2 && age.equals("경로")) {
+				price = (int) (Valueclass2.nightageprice[4] * ordercount*0.6) ;
 			}
 			outputclass.print(price);
 			totalprice = totalprice + price;
 		} else if (discountselect == 3) {
-			for (int i = 0; i < Valueclass2.nightageprice.length; i++) {
-				price = (int) (Valueclass2.dayageprice[i] * ordercount * 0.5);
+			if(age.equals("유아")) {
+				price = (int) (Valueclass2.nightageprice[0] * ordercount*0.5) ;
+			}else if (discountselect == 3 && age.equals("어린이")){
+				price = (int) (Valueclass2.nightageprice[1] * ordercount*0.5) ;
+			}else if (discountselect == 3 && age.equals("청소년")) {
+				price = (int) (Valueclass2.nightageprice[2] * ordercount*0.5);
+			}else if (discountselect == 3 && age.equals("어른"))  {
+				price = (int) (Valueclass2.nightageprice[3] * ordercount*0.5) ;
+			}else if (discountselect == 3 && age.equals("경로")) {
+				price = (int) (Valueclass2.nightageprice[4] * ordercount*0.5) ;
 			}
 			outputclass.print(price);
 			totalprice = totalprice + price;
+
 		} else if (discountselect == 4) {
-			for (int i = 0; i < Valueclass2.nightageprice.length; i++) {
-				price = (int) (Valueclass2.dayageprice[i] * ordercount * 0.8);
+			if(age.equals("유아")) {
+				price = (int) (Valueclass2.nightageprice[0] * ordercount*0.8) ;
+			}else if (discountselect == 4 && age.equals("어린이")){
+				price = (int) (Valueclass2.nightageprice[1] * ordercount*0.8) ;
+			}else if (discountselect == 4 && age.equals("청소년")) {
+				price = (int) (Valueclass2.nightageprice[2] * ordercount*0.8);
+			}else if (discountselect == 4 && age.equals("어른"))  {
+				price = (int) (Valueclass2.nightageprice[3] * ordercount*0.8) ;
+			}else if (discountselect == 4 && age.equals("경로")) {
+				price = (int) (Valueclass2.nightageprice[4] * ordercount*0.8) ;
 			}
 			outputclass.print(price);
 			totalprice = totalprice + price;
 		} else if (discountselect == 5) {
-			for (int i = 0; i < Valueclass2.nightageprice.length; i++) {
-				price = (int) (Valueclass2.dayageprice[i] * ordercount * 0.85);
+			if(age.equals("유아")) {
+				price = (int) (Valueclass2.nightageprice[0] * ordercount*0.85) ;
+			}else if (discountselect == 5 && age.equals("어린이")){
+				price = (int) (Valueclass2.nightageprice[1] * ordercount*0.85) ;
+			}else if (discountselect == 5 && age.equals("청소년")) {
+				price = (int) (Valueclass2.nightageprice[2] * ordercount*0.85);
+			}else if (discountselect == 5 && age.equals("어른"))  {
+				price = (int) (Valueclass2.nightageprice[3] * ordercount*0.85) ;
+			}else if (discountselect == 5 && age.equals("경로")) {
+				price = (int) (Valueclass2.nightageprice[4] * ordercount*0.85) ;
 			}
 			outputclass.print(price);
 			totalprice = totalprice + price;
