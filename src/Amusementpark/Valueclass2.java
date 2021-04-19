@@ -8,6 +8,6 @@ public class Valueclass2 {
 	public static final int national = 3;
 	public static final int multi_child = 4;
 	public static final int pregnant = 5;
-	public static String path = "C:\\Users\\kopo\\Desktop\\out.txt";
+	public static String path = "out.txt";
 
 }
