@@ -7,46 +7,46 @@ public class Inputamuseclass2 {
 	Scanner sb = new Scanner(System.in);
 
 	public int daynightticket() {
-		System.out.println("±ÇÁ¾À» ¼±ÅÃÇÏ¼¼¿ä");
-		System.out.println("1. ÁÖ°£±Ç");
-		System.out.println("2. ¾ß°£±Ç");
+		System.out.println("ê¶Œì¢…ì„ ì„ íƒí•˜ì„¸ìš”");
+		System.out.println("1. ì£¼ê°„ê¶Œ");
+		System.out.println("2. ì•¼ê°„ê¶Œ");
 		System.out.println("->");
 		int choose = sc.nextInt();
 		return choose;
 	}
 
 	public String customeridselect() {
-		System.out.println("ÁÖ¹Î¹øÈ£¸¦ ÀÔ·ÂÇÏ¼¼¿ä");
+		System.out.println("ì£¼ë¯¼ë²ˆí˜¸ë¥¼ ì…ë ¥í•˜ì„¸ìš”");
 		String customeridnumber = sb.nextLine();
 		return customeridnumber;
 	}
 
 	public int ordercount() {
-		System.out.println("¸î°³¸¦ ÁÖ¹®ÇÏ½Ã°Ú½À´Ï±î? (ÃÖ´ë 10°³)");
+		System.out.println("ëª‡ê°œë¥¼ ì£¼ë¬¸í•˜ì‹œê² ìŠµë‹ˆê¹Œ? (ìµœëŒ€ 10ê°œ)");
 		int ordercount = sc.nextInt();
 		return ordercount;
 	}
 
 	public int discountselect1() {
-		System.out.println("1. ¾øÀ½ (³ªÀÌ ¿ì´ë´Â ÀÚµ¿Ã³¸®)");
-		System.out.println("2. Àå¾ÖÀÎ");
-		System.out.println("3. ±¹°¡À¯°øÀÚ");
-		System.out.println("4. ´ÙÀÚ³à");
-		System.out.println("5. ÀÓ»êºÎ");
+		System.out.println("1. ì—†ìŒ (ë‚˜ì´ ìš°ëŒ€ëŠ” ìë™ì²˜ë¦¬)");
+		System.out.println("2. ì¥ì• ì¸");
+		System.out.println("3. êµ­ê°€ìœ ê³µì");
+		System.out.println("4. ë‹¤ìë…€");
+		System.out.println("5. ì„ì‚°ë¶€");
 		int discountselect1 = sc.nextInt();
 		return discountselect1;
 	}
 
 	public int askcloseticket() {
-		System.out.println("°è¼Ó ¹ß±Ç ÇÏ½Ã°Ú½À´Ï±î?");
-		System.out.println("1.Æ¼ÄÏ ¹ß±Ç");
-		System.out.println("2.Á¾·á");
+		System.out.println("ê³„ì† ë°œê¶Œ í•˜ì‹œê² ìŠµë‹ˆê¹Œ?");
+		System.out.println("1.í‹°ì¼“ ë°œê¶Œ");
+		System.out.println("2.ì¢…ë£Œ");
 		int num = sc.nextInt();
 		return num;
 	}
 
 	public int continueecheck() {
-		System.out.println("°è¼Ó ÁøÇà(1: »õ·Î¿î ÁÖ¹®, 2: ÇÁ·Î±×·¥ Á¾·á):");
+		System.out.println("ê³„ì† ì§„í–‰(1: ìƒˆë¡œìš´ ì£¼ë¬¸, 2: í”„ë¡œê·¸ë¨ ì¢…ë£Œ):");
 		int isexit = sc.nextInt();
 		return isexit;
 	}
